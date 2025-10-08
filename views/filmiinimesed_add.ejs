@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="et">
+<head>
+  <meta charset="utf-8">
+  <title>Puhas kuld</title>
+</head>
+<style>
+  </style>
+<body>
+  <img src="images/vp_banner_2025_AA.jpg" alt="Kursuse bänner">
+  <h1>Puhas kuld</h1>
+  <p>See leht on loodud <a href="https://www.tlu.ee">Tallinna Ülikoolis</a> veebiprogrammeerimise kursusel ja ei oma mõistlikku sisu.</p>
+  <p>Roheline tee + L-teaniin ja L-turosiin, viivad su parema fookuseni kui kohvi voi energiajoogi tarbimine</p>
+  <hr>
+  <ul>
+     <li><a href="/">Avalehele</a></li>
+	 <li><a href="/eestifilm">Eesti filmi avaleht</a></li>
+    
+ </ul>
+ <h2>Eesti filmiga seotud inimeste lisamine</h2>
+ <form method="POST"> 
+   <label for= "nameInput">Eesnimi</label>
+   <input id="firstNameInput" type="text" name="firstNameInput" placeholder="Kirja siia eesnimi...">
+   <input id="firstNameSubmit" name ="firstNameSubmit" type="submit" value="Salvesta">
+   <br>
+   <label for= "lastNameInput">Perekonnanimi</label>
+   <input id="lastNameInput" type="text" name="lastNameInput" placeholder="Kirja siia perekonnanimi...">
+   <input id="lastNameSubmit" name ="lastNameSubmit" type="submit" value="Salvesta">
+   <br>
+   <label for="bornInput">Sunnikuupaev</label>
+   <input id="bornInput" name="bornInput" type="date">
+   <br>
+   <label for="deceasedInput">Surmakuupaev</label>
+   <input id="deceasedInput" name="deceasedInput" type="date">
+ </form>
+ <p><%= notice %></p>
+</body>
+</html>
