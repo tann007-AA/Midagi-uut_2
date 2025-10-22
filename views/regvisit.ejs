@@ -1,28 +1,19 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="utf-8">
-  <title>Puhas kuld</title>
+  <meta charset="UTF-8">
+  <title>Külalisteraamat</title>
 </head>
-<style>
-  </style>
 <body>
-  <img src="images/vp_banner_2025_AA.jpg" alt="Kursuse bänner">
-  <h1>Puhas kuld</h1>
-  <p>See leht on loodud <a href="https://www.tlu.ee">Tallinna Ülikoolis</a> veebiprogrammeerimise kursusel ja ei oma mõistlikku sisu.</p>
-  <p>Roheline tee + L-teaniin ja L-turosiin, viivad su parema fookuseni kui kohvi voi energiajoogi tarbimine</p>
-  <hr>
-  <ul>
-   <li><a href="/">Avalehele</a></li>
-    <li><a href="/timenow">Ajainfo</a></li>
-    <li><a href="/vanasonad">vanasonad</a></li>
-    
- </ul>
- <h2> Registreeri oma külastus</h2>
- <form method="POST"> 
-   <label for= "nameInput">Külastaja nimi</label>
-   <input id="nameInput" type="text" name="nameInput" placeholder="Kirja siia oma nimi">
-   <input id="nameSubmit" name ="nameSubmit" type="submit" value="Salvesta">
- </form>
+  <h1>Külalisteraamat</h1>
+  <form method="POST" action="/regvisit">
+    <label>Sisesta oma nimi:</label>
+    <input type="text" name="nameInput" required>
+    <button type="submit">Salvesta</button>
+  </form>
+  <% if (typeof message !== "undefined") { %>
+    <p><strong><%= message %></strong></p>
+  <% } %>
+  <p><a href="/">Tagasi avalehele</a></p>
 </body>
 </html>
