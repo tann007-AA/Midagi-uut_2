@@ -2,7 +2,7 @@
 <html lang="et">
 <head>
   <meta charset="utf-8">
-   <title>Veebiprogrammeerimine</title>
+  <title>Veebiprogrammeerimine</title>
 </head>
 <body>
   <img src="images/vp_banner_2025_AA.jpg" alt="Kursuse bänner">
@@ -11,10 +11,13 @@
   <hr>
   <ul>
 	<li><a href="/">Avalehele</a></li>
+	<li><a href="/eestifilm">Eesti filmi avaleht</a></li>
+  <li><a href="/eestifilm/ametid_add">Filmiga seotud ameti lisamine</a></li>
   </ul>
-  <h2><%= h2 %></h2>
-  <ol><% listData.forEach(function(listItem){ %>
-		<li><%= listItem %></li><% }); %>
-  </ol>
+  <h2>Filmidega seotud inimesed</h2>
+  <ul><% positionList.forEach(function(listItem){ %>
+	  <li><%= listItem.position_name %> | <%= listItem.description %></li>
+	  <% }); %>
+  </ul>
 </body>
 </html>

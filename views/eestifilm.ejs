@@ -2,30 +2,22 @@
 <html lang="et">
 <head>
   <meta charset="utf-8">
-  <title>Eesti filmid</title>
+   <title>Veebiprogrammeerimine</title>
 </head>
 <body>
-  <h1>Eesti filmid</h1>
-  <p><a href="/">← Tagasi avalehele</a></p>
-
-  <p>Siin kuvatakse nimekiri Eesti filmidest, mis on andmebaasis:</p>
-
-  <% if (films && films.length > 0) { %>
-    <ul>
-      <% films.forEach(film => { %>
-        <li>
-          <strong><%= film.pealkiri %></strong> (<%= film.aasta %>) — <%= film.režissöör %>
-        </li>
-      <% }) %>
-    </ul>
-  <% } else { %>
-    <p>Hetkel pole ühtegi filmi lisatud.</p>
-  <% } %>
-
+  <img src="images/vp_banner_2025_AA.jpg" alt="Kursuse bänner">
+  <h1>Tann, veebiprogrammeerimine</h1>1>
+  <p>See leht on loodud <a href="https://www.tlu.ee">Tallinna Ülikoolis</a> veebiprogrammeerimise kurusel ja ei oma mõistlikku sisu.</p>
   <hr>
-  <p>
-    <a href="/filmiinimesed">Vaata filmiinimesi</a> |
-    <a href="/filmiinimesed/add">Lisa uus filmiinimene</a>
-  </p>
+  <ul>
+	<li><a href="/">Avalehele</a></li>
+  </ul>
+  <h2>Eesti film</h2>
+  <ul>
+	<li><a href="/eestifilm/filmiinimesed">Eesti filmiga seotud inimesed</a></li>
+	<li><a href="/eestifilm/filmiinimesed_add">Eesti filmiga seotud inimeste lisamine</a></li>
+  <li><a href="/eestifilm/ametid">Filmiga seotud ametid</a></li>
+	<li><a href="/eestifilm/ametid_add">Lisa filmiga seotud ameteid</a></li>
+  </ul>
 </body>
 </html>

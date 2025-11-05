@@ -2,23 +2,21 @@
 <html lang="et">
 <head>
   <meta charset="utf-8">
-  <title>Filmiinimesed</title>
+  <title>Veebiprogrammeerimine</title>
 </head>
 <body>
-  <h1>Filmiinimesed</h1>
-  <p><a href="/eestifilm">← Tagasi filmide juurde</a></p>
-
-  <% if (people && people.length > 0) { %>
-    <ul>
-      <% people.forEach(person => { %>
-        <li><strong><%= person.eesnimi %> <%= person.perenimi %></strong> — <%= person.amet %></li>
-      <% }) %>
-    </ul>
-  <% } else { %>
-    <p>Filmiinimesi pole veel lisatud.</p>
-  <% } %>
-
+  <img src="images/vp_banner_2025_AA.jpg" alt="Kursuse bänner">
+  <h1>Tann, veebiprogrammeerimine</h1>
+  <p>See leht on loodud <a href="https://www.tlu.ee">Tallinna Ülikoolis</a> veebiprogrammeerimise kurusel ja ei oma mõistlikku sisu.</p>
   <hr>
-  <p><a href="/filmiinimesed/add">Lisa uus filmiinimene</a></p>
+  <ul>
+	<li><a href="/">Avalehele</a></li>
+	<li><a href="/eestifilm">Eesti filmi avaleht</a></li>
+  </ul>
+  <h2>Eesti filmiga seotud inimesed</h2>
+  <ul><% personList.forEach(function(listItem){ %>
+	<li><%= listItem.first_name %> <%= listItem.last_name %>, sündinud <%= listItem.born %></li>
+	<% }); %>
+  </ul>
 </body>
 </html>

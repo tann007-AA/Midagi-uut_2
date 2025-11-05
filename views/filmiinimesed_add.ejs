@@ -2,28 +2,33 @@
 <html lang="et">
 <head>
   <meta charset="utf-8">
-  <title>Lisa filmiinimene</title>
-  <link rel="stylesheet" href="css/style.css">
+  <title>Veebiprogrammeerimine</title>
 </head>
 <body>
-  <h1>Lisa uus filmiinimene</h1>
-  <p><a href="/filmiinimesed">← Tagasi nimekirja</a></p>
-
-  <form method="POST" action="/filmiinimesed/add">
-    <label for="eesnimi">Eesnimi:</label><br>
-    <input type="text" id="eesnimi" name="eesnimi" required><br><br>
-
-    <label for="perenimi">Perenimi:</label><br>
-    <input type="text" id="perenimi" name="perenimi" required><br><br>
-
-    <label for="amet">Amet:</label><br>
-    <input type="text" id="amet" name="amet" required><br><br>
-
-    <input type="submit" value="Lisa">
+  <img src="images/vp_banner_2025_AA.jpg" alt="Kursuse bänner">
+  <h1>Tann, veebiprogrammeerimine</h1>
+  <p>See leht on loodud <a href="https://www.tlu.ee">Tallinna Ülikoolis</a> veebiprogrammeerimise kurusel ja ei oma mõistlikku sisu.</p>
+  <hr>
+  <ul>
+	<li><a href="/">Avalehele</a></li>
+	<li><a href="/eestifilm">Eesti filmi avaleht</a></li>
+  </ul>
+  <h2>Eesti filmiga seotud inimeste lisamine</h2>
+  <form method="POST">
+    <label for="firstNameInput">Eesnimi</label>
+	<input id="firstNameInput" type="text" name="firstNameInput" placeholder="Kirjuta siia eesnimi..." required>
+    <br>
+    <label for="lastNameInput">Perekonnanimi</label>
+	<input id="lastNameInput" type="text" name="lastNameInput" placeholder="Kirjuta siia perekonnanimi..." required>
+    <br>
+	<label for="bornInput">Sünnikuupäev</label>
+	<input id="bornInput" name="bornInput" type="date" required>
+	<br>
+	<label for="deceasedInput">Surmakuupäev</label>
+	<input id="deceasedInput" name="deceasedInput" type="date">
+	<br>
+	<input id="personSubmit" name="personSubmit" type="submit" value="Salvesta">
   </form>
-
-  <% if (message) { %>
-    <p style="color:green;"><%= message %></p>
-  <% } %>
+  <p><%= notice %></p>
 </body>
 </html>

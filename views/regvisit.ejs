@@ -1,19 +1,26 @@
 <!DOCTYPE html>
 <html lang="et">
 <head>
-  <meta charset="UTF-8">
-  <title>Külalisteraamat</title>
+  <meta charset="utf-8">
+  <title>Veebiprogrammeerimine</title>
 </head>
 <body>
-  <h1>Külalisteraamat</h1>
-  <form method="POST" action="/regvisit">
-    <label>Sisesta oma nimi:</label>
-    <input type="text" name="nameInput" required>
-    <button type="submit">Salvesta</button>
+  <img src="images/vp_banner_2025_AA.jpg" alt="Kursuse bänner">
+  <h1>Tann, veebiprogrammeerimine</h1>
+  <p>See leht on loodud <a href="https://www.tlu.ee">Tallinna Ülikoolis</a> veebiprogrammeerimise kurusel ja ei oma mõistlikku sisu.</p>
+  <hr>
+  <ul>
+	<li><a href="/">Avalehele</a></li>
+  </ul>
+  <h2>Registreeri oma külastus</h2>
+  <form method="POST">
+	<label for="firstNameInput">Eesnimi</label>
+	<input id="firstNameInput" type="text" name="firstNameInput" placeholder="Kirjuta siia oma eesnimi...">
+    <br>
+    <label for="lastNameInput">Perekonnanimi</label>
+	<input id="lastNameInput" type="text" name="lastNameInput" placeholder="Kirjuta siia oma perekonnanimi...">
+    <br>
+	<input id="nameSubmit" name="nameSubmit" type="submit" value="Salvesta">
   </form>
-  <% if (typeof message !== "undefined") { %>
-    <p><strong><%= message %></strong></p>
-  <% } %>
-  <p><a href="/">Tagasi avalehele</a></p>
 </body>
 </html>
